@@ -59,7 +59,7 @@ holiday_hash.each do |season, season_hash|
   puts key
   season_hash.each do |holiday, supplys|
     holiday=holiday.to_s
-    holiday.gsub!(/_/,/ /)
+    holiday.gsub("_"," ")
     holiday=holiday.split.capitalize.join
     line="  "+"#{holiday}".capitalize + ": " + supplys.join(", ")
   puts line
