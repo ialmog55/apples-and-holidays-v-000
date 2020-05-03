@@ -60,8 +60,12 @@ holiday_hash.each do |season, season_hash|
   season_hash.each do |holiday, supplys|
     holiday=holiday.to_s
     holiday=holiday.gsub("_"," ")
-    holiday=holiday.split.capitalize.join
-    line="  "+"#{holiday}".capitalize + ": " + supplys.join(", ")
+    holiday=holiday.split
+    holiday.map do |word|
+      word.capitalize
+    end
+    holiday=holiday.join
+    line="  "+holiday+ ": " + supplys.join(", ")
   puts line
   end
 
