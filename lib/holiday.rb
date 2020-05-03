@@ -82,6 +82,6 @@ holiday_hash.each do |season,season_hash|
       BBQ << holiday.to_s
     end
 end
-  
+
 end
 end
