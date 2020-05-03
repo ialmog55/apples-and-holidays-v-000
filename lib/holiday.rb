@@ -58,7 +58,7 @@ holiday_hash.each do |season, season_hash|
   key="#{season}".capitalize+":"
   puts key
   season_hash.each do |holiday, supplys|
-    holiday=holiday.gsub!(/_/,/ /)
+    holiday=holiday.to_s.gsub!(/_/,/ /)
     holiday=holiday.split.capitalize.join
     line="  "+"#{holiday}".capitalize + ": " + supplys.join(", ")
   puts line
